@@ -1,8 +1,14 @@
 {
-  "name": "npm-modal",
-  "version": "0.1.0",
-  "private": true,
+  "name": "npm-modal-oc-creap",
+  "version": "0.1.4",
+  "private": false,
+  "author": "creaprog",
+  "main": "dist/components/Modal.js",
+  "module": "dist/components/Modal.js",
+  "description": "modal project OC",
+  "files": [ "dist", "README.md" ],
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
@@ -13,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npx babel src/lib --out-dir dist --copy-files",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -34,5 +40,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10"
   }
 }
